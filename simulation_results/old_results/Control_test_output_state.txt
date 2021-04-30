@@ -1,0 +1,126 @@
+00:00:00:000
+State for model input_reader_start is next time: 00:00:00:000
+State for model input_reader_loaded is next time: 00:00:00:000
+State for model input_reader_unloaded is next time: 00:00:00:000
+State for model control1 is :
+	phase: idle   sending: 0   fin: 0
+	total requests: 0   current prepared materials: 0
+00:00:00:000
+State for model input_reader_start is next time: 00:00:05:000
+State for model input_reader_loaded is next time: 00:00:07:000
+State for model input_reader_unloaded is next time: 00:00:12:000
+State for model control1 is :
+	phase: idle   sending: 0   fin: 0
+	total requests: 0   current prepared materials: 0
+00:00:05:000
+State for model input_reader_start is next time: 00:00:25:000
+State for model input_reader_loaded is next time: 00:00:07:000
+State for model input_reader_unloaded is next time: 00:00:12:000
+State for model control1 is :
+	phase: init   sending: 1   fin: 0
+	total requests: 2   current prepared materials: 0
+00:00:05:000
+State for model input_reader_start is next time: 00:00:25:000
+State for model input_reader_loaded is next time: 00:00:07:000
+State for model input_reader_unloaded is next time: 00:00:12:000
+State for model control1 is :
+	phase: init   sending: 0   fin: 0
+	total requests: 2   current prepared materials: 0
+00:00:07:000
+State for model input_reader_start is next time: 00:00:25:000
+State for model input_reader_loaded is next time: 00:00:07:000
+State for model input_reader_unloaded is next time: 00:00:12:000
+State for model control1 is :
+	phase: prep   sending: 1   fin: 0
+	total requests: 2   current prepared materials: 0
+00:00:07:000
+State for model input_reader_start is next time: 00:00:25:000
+State for model input_reader_loaded is next time: 00:00:07:000
+State for model input_reader_unloaded is next time: 00:00:12:000
+State for model control1 is :
+	phase: prep   sending: 0   fin: 0
+	total requests: 2   current prepared materials: 0
+00:00:12:000
+State for model input_reader_start is next time: 00:00:25:000
+State for model input_reader_loaded is next time: 00:00:07:000
+State for model input_reader_unloaded is next time: 00:00:07:000
+State for model control1 is :
+	phase: init   sending: 1   fin: 1
+	total requests: 2   current prepared materials: 1
+00:00:12:000
+State for model input_reader_start is next time: 00:00:25:000
+State for model input_reader_loaded is next time: 00:00:07:000
+State for model input_reader_unloaded is next time: 00:00:07:000
+State for model control1 is :
+	phase: init   sending: 0   fin: 0
+	total requests: 2   current prepared materials: 1
+00:00:14:000
+State for model input_reader_start is next time: 00:00:25:000
+State for model input_reader_loaded is next time: 00:00:18:000
+State for model input_reader_unloaded is next time: 00:00:07:000
+State for model control1 is :
+	phase: prep   sending: 1   fin: 0
+	total requests: 2   current prepared materials: 1
+00:00:14:000
+State for model input_reader_start is next time: 00:00:25:000
+State for model input_reader_loaded is next time: 00:00:18:000
+State for model input_reader_unloaded is next time: 00:00:07:000
+State for model control1 is :
+	phase: prep   sending: 0   fin: 0
+	total requests: 2   current prepared materials: 1
+00:00:19:000
+State for model input_reader_start is next time: 00:00:25:000
+State for model input_reader_loaded is next time: 00:00:18:000
+State for model input_reader_unloaded is next time: 00:00:18:000
+State for model control1 is :
+	phase: idle   sending: 1   fin: 1
+	total requests: 2   current prepared materials: 2
+00:00:19:000
+State for model input_reader_start is next time: 00:00:25:000
+State for model input_reader_loaded is next time: 00:00:18:000
+State for model input_reader_unloaded is next time: 00:00:18:000
+State for model control1 is :
+	phase: idle   sending: 0   fin: 0
+	total requests: 2   current prepared materials: 2
+00:00:30:000
+State for model input_reader_start is next time: inf
+State for model input_reader_loaded is next time: 00:00:18:000
+State for model input_reader_unloaded is next time: 00:00:18:000
+State for model control1 is :
+	phase: init   sending: 1   fin: 0
+	total requests: 3   current prepared materials: 2
+00:00:30:000
+State for model input_reader_start is next time: inf
+State for model input_reader_loaded is next time: 00:00:18:000
+State for model input_reader_unloaded is next time: 00:00:18:000
+State for model control1 is :
+	phase: init   sending: 0   fin: 0
+	total requests: 3   current prepared materials: 2
+00:00:32:000
+State for model input_reader_start is next time: inf
+State for model input_reader_loaded is next time: inf
+State for model input_reader_unloaded is next time: 00:00:18:000
+State for model control1 is :
+	phase: prep   sending: 1   fin: 0
+	total requests: 3   current prepared materials: 2
+00:00:32:000
+State for model input_reader_start is next time: inf
+State for model input_reader_loaded is next time: inf
+State for model input_reader_unloaded is next time: 00:00:18:000
+State for model control1 is :
+	phase: prep   sending: 0   fin: 0
+	total requests: 3   current prepared materials: 2
+00:00:37:000
+State for model input_reader_start is next time: inf
+State for model input_reader_loaded is next time: inf
+State for model input_reader_unloaded is next time: inf
+State for model control1 is :
+	phase: idle   sending: 1   fin: 1
+	total requests: 3   current prepared materials: 3
+00:00:37:000
+State for model input_reader_start is next time: inf
+State for model input_reader_loaded is next time: inf
+State for model input_reader_unloaded is next time: inf
+State for model control1 is :
+	phase: idle   sending: 0   fin: 0
+	total requests: 3   current prepared materials: 3

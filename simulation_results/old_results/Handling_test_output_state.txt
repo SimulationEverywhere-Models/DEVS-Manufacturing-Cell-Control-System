@@ -1,0 +1,36 @@
+00:00:00:000
+State for model input_reader is next time: 00:00:00:000
+State for model handling1 is :
+	phase: passive   sending: 0   index: 0
+00:00:00:000
+State for model input_reader is next time: 00:00:10:000
+State for model handling1 is :
+	phase: passive   sending: 0   index: 0
+00:00:10:000
+State for model input_reader is next time: 00:00:05:000
+State for model handling1 is :
+	phase: active   sending: 1   index: 1
+00:00:15:000
+State for model input_reader is next time: 00:00:07:000
+State for model handling1 is :
+	phase: active   sending: 1   index: 2
+00:00:20:000
+State for model input_reader is next time: 00:00:07:000
+State for model handling1 is :
+	phase: passive   sending: 0   index: 2
+00:00:22:000
+State for model input_reader is next time: 00:00:08:000
+State for model handling1 is :
+	phase: active   sending: 1   index: 3
+00:00:27:000
+State for model input_reader is next time: 00:00:08:000
+State for model handling1 is :
+	phase: passive   sending: 0   index: 3
+00:00:30:000
+State for model input_reader is next time: inf
+State for model handling1 is :
+	phase: active   sending: 1   index: 4
+00:00:35:000
+State for model input_reader is next time: inf
+State for model handling1 is :
+	phase: passive   sending: 0   index: 4

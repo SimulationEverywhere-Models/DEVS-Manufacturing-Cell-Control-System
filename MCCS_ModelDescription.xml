@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Models>
+	<Model name="Control" type="atomic" description="an agent that acts as the supervisory agent for all internal agents and communicates with external entities">
+		<Inputs>
+			<Port name="startIn" type="int" description="batches of processing requests from external entities"/>
+			<Port name="loadedIn" type="message_t" description="storage is full, material can be moved"/>
+			<Port name="unloadedIn" type="message_t" description="material has been moved, storage is empty"/>
+		</Inputs>
+		<Outputs>
+			<Port name="loadOut" type="message_t" description="start the initialization system stage, ask to load material"/>
+			<Port name="prepOut" type="message_t" description="start the preparation system stage, ask to move material"/>
+			<Port name="matPreparedOut" type="int" description="the unit of material that has just been prepared"/>
+			<Port name="endOut" type="int" description="all requested materials have been successfully prepared, system moving to idle stage"/>
+		</Outputs>
+		<Files>
+			<File name="control.hpp" type="H" location="/atomics/"/>
+			<File name="main_control_test.cpp" type="CPP" location="/test/"/>
+			<File name="control_input_test_startIn.txt" type="TXT" location="/input_data/"/>
+			<File name="control_input_test_loadedIn.txt" type="TXT" location="/input_data/"/>
+			<File name="control_input_test_unloadedIn.txt" type="TXT" location="/input_data/"/>
+			<File name="control_test_output_messages.txt" type="TXT" location="/simulation_results/"/>
+			<File name="control_test_output_state.txt" type="TXT" location="/simulation_results/"/>
+			<File name="CONTROL_TEST.exe" type="EXE" location="/bin/"/>
+		</Files>
+	</Model>
+
+
+	<Model name="Handling" type="atomic" description="an agent that moves material from a full storage to a different place (e.g., a conveyor belt) for further processing">
+		<Inputs>
+			<Port name="prepIn" type="message_t" description="preparation requests"/>
+		</Inputs>
+		<Outputs>
+			<Port name="unloadOut" type="message_t" description="notify completion of movement"/>
+		</Outputs>
+		<Files>
+			<File name="handling.hpp" type="H" location="/atomics/"/>
+			<File name="main_handling_test.cpp" type="CPP" location="/test/"/>
+			<File name="handling_input_test.txt" type="TXT" location="/input_data/"/>
+			<File name="handling_test_output_messages.txt" type="TXT" location="/simulation_results/"/>
+			<File name="handling_test_output_state.txt" type="TXT" location="/simulation_results/"/>
+			<File name="HANDLING_TEST.exe" type="EXE" location="/bin/"/>
+		</Files>
+	</Model>
+	
+
+	<Model name="Storage" type="atomic" description="an agent that loads the material inventory for moving and processing">
+		<Inputs>
+			<Port name="loadIn" type="message_t" description="material load requests"/>
+			<Port name="unloadIn" type="message_t" description="material has been moved"/>
+		</Inputs>
+		<Outputs>
+			<Port name="loadedOut" type="message_t" description="notify full status"/>
+			<Port name="unloadedOut" type="message_t" description="notify empty status and material movement complete"/>
+		</Outputs>
+		<Files>
+			<File name="storage.hpp" type="H" location="/atomics/"/>
+			<File name="main_storage_test.cpp" type="CPP" location="/test/"/>
+			<File name="storage_input_test_loadIn.txt" type="TXT" location="/input_data/"/>
+			<File name="storage_input_test_unloadIn.txt" type="TXT" location="/input_data/"/>
+			<File name="storage_test_output_messages.txt" type="TXT" location="/simulation_results/"/>
+			<File name="storage_test_output_state.txt" type="TXT" location="/simulation_results/"/>
+			<File name="STORAGE_TEST.exe" type="EXE" location="/bin/"/>
+		</Files>
+	</Model>
+
+	
+	<Model name="IH" type="coupled" description="a coupled model that receives load and preparation requests and returns corresponding responses after a certain amount of time when request have been serviced">
+		<Inputs>
+			<Port name="loadIn" type="message_t" description="material load requests"/>
+			<Port name="prepIn" type="message_t" description="material preparation requests"/>
+		</Inputs>
+		<Outputs>
+			<Port name="loadedOut" type="message_t" description="notify full status"/>
+			<Port name="unloadedOut" type="message_t" description="notify empty status and material movement complete"/>
+		</Outputs>
+		<Files>
+			<File name="main_inventory_handler_test.cpp" type="CPP" location="/test/"/>
+			<File name="InventoryHandler_input_test_loadIn.txt" type="TXT" location="/input_data/"/>
+			<File name="InventoryHandler_input_test_prepIn.txt" type="TXT" location="/input_data/"/>
+			<File name="InventoryHandler_test_output_messages.txt" type="TXT" location="/simulation_results/"/>
+			<File name="InventoryHandler_test_output_state.txt" type="TXT" location="/simulation_results/"/>
+			<File name="CONTROL_TEST.exe" type="EXE" location="/bin/"/>
+		</Files>
+	</Model>
+
+	
+	<Model name="MCCS" type="coupled" description="the top coupled model that receives external batches of material processing requests and sends outputs when a material has been prepared or when all materials have been successfully prepared for processing">
+		<Inputs>
+			<Port name="startIn" type="int" description="material batch requests"/>
+		</Inputs>
+		<Outputs>
+			<Port name="matPreparedOut" type="int" description="the unit of material that has just been prepared"/>
+			<Port name="endOut" type="int" description="all requested materials delivered successfully, system moving to idle Stage"/>
+		</Outputs>
+		<Files>
+			<File name="main.cpp" type="CPP" location="/top_model/"/>
+			<File name="MCCS_input_test_startIn.txt" type="TXT" location="/input_data/"/>
+			<File name="MCCS_main_test_output_messages.txt" type="TXT" location="/simulation_results/"/>
+			<File name="MCCS_main_test_output_state.txt" type="TXT" location="/simulation_results/"/>
+			<File name="MCCS.exe" type="EXE" location="/bin/"/>
+		</Files>
+	</Model>
+</Models>
